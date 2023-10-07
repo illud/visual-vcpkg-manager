@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1017</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(33, 33, 33);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>1011</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>1001</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border:none;
+    color: #ffffff;
+}
+QTableWidgetItem {
+border: 1px;
+                 border-radius: 15px;
+               }
+
+QTableWidget::item:focus {border:none;}
+
+QHeaderView::section {
+	border-radius: 0px;
+    background-color: rgb(39, 39, 39);
+	color: #ffffff;
+    border: none;
+    height: 28px;
+}
+
+QTableCornerButton::section {
+	background-color: rgb(66, 66, 66);
+	border: none;
+}
+
+/*QTableWidget::item {
+border: none;
+	padding: 5px; 
+	color: #ffffff;
+    margin-top: 5px;          
+    border-radius: 0px;
+    padding-left: 5px;
+
+}
+*/
+
+
+/* VERTICAL SCROLLBAR */
+/* SCROLLBAR VERTICAL */
+QScrollBar:vertical {
+    background: transparent;
+    width: 12px;
+    margin: 15px 0 15px 2px;
+    border-radius: 0px;
+    margin-right: 4px;
+ }
+
+/* HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {    
+    background-color: rgba(158, 158, 158, 90);
+    min-height: 30px;
+    border-radius: 1px;
+}
+
+QScrollBar::handle:vertical:hover {    
+    background-color: rgb(158, 158, 158);
+}
+
+QScrollBar::handle:vertical:pressed {    
+    background-color: rgb(66, 66, 66);
+}
+
+/* ADD-LINE pseudo-element for top and bottom bars */
+QScrollBar::add-line:vertical {
+    background: transparent;
+    height: 15px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+QScrollBar::add-line:vertical:hover {
+    background: transparent;
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background: transparent;
+}
+
+QScrollBar::sub-line:vertical {
+    background: transparent;
+    height: 15px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+QScrollBar::sub-line:vertical:hover {
+    background: transparent;
+}
+
+QScrollBar::sub-line:vertical:pressed {
+    background: transparent;
+}
+
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: transparent;
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: transparent;
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+
+
+/* HORIZONTAL SCROLLBAR - HOMEWORK */
+QScrollBar:horizontal {
+   	border: none;
+	background-color: transparent;
+	height: 3px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::handle:horizontal {
+    	background-color: rgb(158, 158, 158);
+	min-height: 30px;
+	border-radius: 1px;
+}
+QScrollBar::add-line:horizontal {
+    
+}
+QScrollBar::sub-line:horizontal {
+    
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+}</string>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::NoPen</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>860</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>PACKAGE</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ACTION</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="btnAdd">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnAdd { 
+    background-color: rgb(41, 98, 255);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+      border: 1px;
+border-radius: 10px;
+}
+
+QPushButton#btnAdd:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnAdd::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ADD PACKAGE</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="btnInstall">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>240</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnInstall { 
+    background-color: rgb(41, 98, 255);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 1px;
+border-radius: 10px;
+}
+
+QPushButton#btnInstall:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnInstall::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>INSTALL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>280</y>
+        <width>431</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 900 9pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Before you press install please make shure you have git installed.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="loading_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>201</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLineEdit" name="searchText">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>291</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: solid;
+font: 900 9pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+border-bottom-width: 1px;
+border-color: none none gray none;
+border-radius:0px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSearch">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnSearch { 
+    background-color: rgb(41, 98, 255);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 1px;
+	border-radius: 10px;
+}
+
+QPushButton#btnSearch:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnSearch::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SEARCH</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>48</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 900 9pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Package Name</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnBack">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnBack { 
+    background-color: rgb(41, 98, 255);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 1px;
+	border-radius: 10px;
+}
+
+QPushButton#btnBack:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnBack::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>GO BACK</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="searchTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>991</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border:none;
+    color: #ffffff;
+}
+QTableWidgetItem {
+border: 1px;
+                 border-radius: 15px;
+               }
+
+QTableWidget::item:focus {border:none;}
+
+QHeaderView::section {
+	border-radius: 0px;
+    background-color: rgb(39, 39, 39);
+	color: #ffffff;
+    border: none;
+    height: 28px;
+}
+
+QTableCornerButton::section {
+	background-color: rgb(66, 66, 66);
+	border: none;
+}
+
+/*QTableWidget::item {
+border: none;
+	padding: 5px; 
+	color: #ffffff;
+    margin-top: 5px;          
+    border-radius: 0px;
+    padding-left: 5px;
+
+}
+*/
+
+
+/* VERTICAL SCROLLBAR */
+/* SCROLLBAR VERTICAL */
+QScrollBar:vertical {
+    background: transparent;
+    width: 12px;
+    margin: 15px 0 15px 2px;
+    border-radius: 0px;
+    margin-right: 4px;
+ }
+
+/* HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {    
+    background-color: rgba(158, 158, 158, 90);
+    min-height: 30px;
+    border-radius: 1px;
+}
+
+QScrollBar::handle:vertical:hover {    
+    background-color: rgb(158, 158, 158);
+}
+
+QScrollBar::handle:vertical:pressed {    
+    background-color: rgb(66, 66, 66);
+}
+
+/* ADD-LINE pseudo-element for top and bottom bars */
+QScrollBar::add-line:vertical {
+    background: transparent;
+    height: 15px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+QScrollBar::add-line:vertical:hover {
+    background: transparent;
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background: transparent;
+}
+
+QScrollBar::sub-line:vertical {
+    background: transparent;
+    height: 15px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+QScrollBar::sub-line:vertical:hover {
+    background: transparent;
+}
+
+QScrollBar::sub-line:vertical:pressed {
+    background: transparent;
+}
+
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: transparent;
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: transparent;
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+
+
+/* HORIZONTAL SCROLLBAR - HOMEWORK */
+QScrollBar:horizontal {
+   	border: none;
+	background-color: transparent;
+	height: 3px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::handle:horizontal {
+    	background-color: rgb(158, 158, 158);
+	min-height: 30px;
+	border-radius: 1px;
+}
+QScrollBar::add-line:horizontal {
+    
+}
+QScrollBar::sub-line:horizontal {
+    
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+}</string>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::NoPen</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>860</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>PACKAGE</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ACTION</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QLabel" name="installingLabel">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>300</y>
+        <width>431</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 900 9pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>This may take a few minutes please wait.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="loading" native="true">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>170</y>
+        <width>201</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(22, 22, 22, 80);</string>
+    </property>
+    <widget class="QPushButton" name="btnClose">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>3</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#btnClose{ 
+	background-color: rgb(255, 25, 98);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 1px;
+border-radius: 10px;
+}
+
+QPushButton#btnClose:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnClose::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnMin">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>3</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#btnMin{ 
+    background-color: rgb(41, 98, 255);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 1px;
+border-radius: 10px;
+}
+
+QPushButton#btnMin:hover{ 
+    background-color: rgb(33, 78, 203);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+
+QPushButton#btnMin::focus:pressed{ 
+	background-color: rgb(38, 72, 184);
+	font: 900 9pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255);
+    border: 0px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>--</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>151</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 900 9pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Visual Vcpkg Manager</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

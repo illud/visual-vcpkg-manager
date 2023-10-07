@@ -1,0 +1,1 @@
+# Visual Vcpkg managerVisual Vcpkg manager is a app built with  [QT C++](https://www.qt.io) that allows you to manage vcpkg visually.![games](./in_app_img/1.png)![1](./in_app_img/2.png)## Buildwindeployqt.exe --no-translations "C:\release-path\release\visual-vcpkg-manager.exe"
